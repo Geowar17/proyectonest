@@ -1,10 +1,18 @@
 import { Controller, Get } from '@nestjs/common';
+import { TasksService } from './tasks.service';
 
 @Controller({})
 export class TasksController {
+tasksService: TasksService;
+    constructor(tasksService:TasksService) {
+        this.tasksService = tasksService;
+    }
+
     @Get('/tasks')
     getAllTasks() {
-        return 'obteniendo las tareas'
+
+        return this.tasksService.getTasks();
+        
     }
 
 }
