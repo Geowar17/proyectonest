@@ -1,4 +1,6 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
+import { createTasksDto } from "./dto/create-tasks.dto";
+import { updateTasksDto } from "./dto/update-tasks.dto";
 
 export interface User {
     name: string;
@@ -38,7 +40,7 @@ getTask(id:number) {
         return task
 
     }
-    updateTasks() {
+    updateTasks(task: updateTasksDto) {
 
         return ' ACTUALIZANDO TAREA'
 

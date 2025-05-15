@@ -1,5 +1,4 @@
-import interface updateTasksDto {
+export interface updateTasksDto {
     title?: string;
     description?: string;
-    status: string;
 }
