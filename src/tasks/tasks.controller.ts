@@ -25,7 +25,7 @@ tasksService: TasksService;
 
     
     @Post()
-    @UsePipes(new ValidationPipe)
+   
     createTasks(@Body() task: createTasksDto){
        
         return this.tasksService.CreateTasks(task)

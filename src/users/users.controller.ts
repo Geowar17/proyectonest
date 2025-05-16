@@ -13,7 +13,7 @@ export class UsersController {
     }
 
     @Post()
-      @UsePipes( new ValidationPipe())
+
       CreateUser(@Body() user: CreateUserDto){
       return this.usersService.createUser(user)
 
